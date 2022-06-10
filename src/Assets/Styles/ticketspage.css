@@ -1,0 +1,17 @@
+#tickets--page{
+    /* font-size: 100px; */
+}
+#tickets--page .content{
+    padding: 5vh 0;
+    width: 80%;
+    margin: 0 auto;
+}
+.flight--name p:nth-child(1){
+    font-weight:var(--font-weight-3) ;
+    font-size:var(--font-size-title2) ;
+    color: var(--color-blue-1);
+}
+.flight--name p{
+    font-weight:var(--font-weight-3) ;
+    font-size:var(--font-size-title2) ; 
+}

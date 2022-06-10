@@ -1,0 +1,46 @@
+#header{
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    background-color: var(--color-blue-2);
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navbar ul{
+    margin: 0 auto;
+    justify-content: center;
+    color: var(--color-white-1);
+    display: flex;
+    gap: 20%;
+    list-style: none;
+    font-size: var(--font-size-content);
+}
+.l-nar{
+  display: flex;
+  align-items: center;
+  gap: 20%;
+}
+.accout{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid var(--color-white-1);
+    border-radius: 20px;
+}
+.accout button{
+    width: 70px;
+    height: 20px;
+    font-size: var(--font-size-content);
+    color: var(--color-white-1);
+    background: none;
+    outline: none;
+    border: none;
+}
+.accout p{
+    color: var(--color-white-1);
+    display: flex;
+    justify-content: center;
+    
+}

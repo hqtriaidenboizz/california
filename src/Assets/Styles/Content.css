@@ -1,0 +1,119 @@
+#Content{
+}
+.baner{
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../Images/bg3.jpg');
+}
+.baner--content{
+    height: 100%;
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 8%;
+}
+.SearchTickets--form{
+    background-color: var(--color-white-1);
+    width: 25vw;
+    height: 70%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SearchTickets--form form{
+    width: 80%;
+   display: flex;
+   flex-direction: column;
+}
+.SearchTickets--form form div:not(:last-child){
+    border-radius: 15px;
+    border: 1px solid var(--color-black-2);
+}
+.SearchTickets--form form div{
+    width: 100%;
+    margin : 20px 0;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+label{
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-weight-3);
+}
+select, input {
+    outline: none;
+    border: none;
+    padding: 0 10px;
+}
+.title{
+    line-height: 50px;
+}
+.title h2{
+    font-weight: 300;
+    font-size: 40px;
+}
+.title h3{
+    font-size: 50px;
+    color: var(--color-black-1);
+}
+.icon{
+    padding: 0 10px;
+}
+.btn--search button {
+    transition: 1s;
+    font-size: var(--font-size-content);
+    color: var(--color-white-1);
+    border-radius: 15px;
+    width: 40%;
+    height: 5vh;
+    outline: none;
+    border: none;
+    background-color: var(--color-blue-1);
+}
+.btn--search button:hover {
+    color: var(--color-blue-1);
+   border: 1px solid var(--color-black-2);
+    background-color: var(--color-white-1)
+}
+.popular{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+.popular1 {
+    width: 90%;
+    
+}
+.items{
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5%;
+}
+.items .item {
+    width: 100%;
+}
+.baner2{
+    display: flex;
+    justify-content: end;
+    align-items:flex-end;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('../Images/bg7.jpg');
+}

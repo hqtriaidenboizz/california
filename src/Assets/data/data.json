@@ -1,0 +1,98 @@
+[
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/ICN1-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Seoul/Incheon ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD335.90"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/NRT-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Tokyo/Narita ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD648.80"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/KIX-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Osaka/Kansai ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD600.80"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/LAX-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Los Angeles ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD528.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/SFO-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến San Francisco ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD528.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/JFK-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến New York/John F. Kennedy ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD643.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/IAD-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Washington/Dulles ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD893.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/YYZ-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Toronto/Pearson ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD916.80"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/ICN1-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Seoul/Incheon ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD335.90"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/NRT-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Tokyo/Narita ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD648.80"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/KIX-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Osaka/Kansai ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD600.80"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/LAX-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Los Angeles ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD528.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/SFO-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến San Francisco ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD528.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/JFK-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến New York/John F. Kennedy ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD643.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/IAD-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Washington/Dulles ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD893.57"
+	},
+	{
+		"img": "https://www.koreanair.com/content/dam/koreanair/ko/airport-img/YYZ-list-pc.jpg",
+		"location": "Khởi hành Hà Nội -  Đến Toronto/Pearson ",
+		"type": "Hạng Phổ thông Một chiều",
+		"price": "USD916.80"
+	}
+]
