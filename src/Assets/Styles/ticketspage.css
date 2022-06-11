@@ -1,5 +1,6 @@
 #tickets--page{
     /* font-size: 100px; */
+    display: none;
 }
 #tickets--page .content{
     padding: 5vh 0;

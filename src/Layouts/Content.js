@@ -2,36 +2,40 @@ import React, { useEffect, useState } from "react";
 import { FaPlaneArrival, FaPlaneDeparture, FaRegCalendar, FaPeopleArrows } from "react-icons/fa";
 import '../Assets/Styles/Content.css';
 import axios from "axios";
-import Items from "../Components/items";
+import Ticket from "../Components/ticket";
+import '../Assets/Styles/ticketspage.css';
+import Popular from "../Pages/tickets";
 export default function Content() {
     const [allInput, setallInput] = useState({
-        DEPARTURE :'Hồ CHí Minh',
-        ARRIVAL:'Hà Nội',
+        DEPARTURE: 'Hồ Chí Minh (SGN)',
+        ARRIVAL: 'Hà Nội (HAN)',
         DATES: '',
-        PASSENGES:null,
+        PASSENGES: 1,
     })
-    const handleChange = (event) =>{
+    const handleChange = (event) => {
         let value = event.target.value;
         let name = event.target.name;
 
         setallInput((prevalue) => {
             return {
                 ...prevalue,
-                [name]:value
+                [name]: value
             }
         })
     }
-    const handleSubmit =(event) => {
-        console.log(allInput)
+    const handleSubmit = (event) => {
+        document.getElementById('popular').style.display="none";
+        document.getElementById('tickets--page').style.display = "block";
         // alert(allInput);
         event.preventDefault();
 
     }
     const [listTicket, setListTicket] = useState([]);
     const getData = () => {
-        axios.get(`https://628d8c71a339dfef879c3fac.mockapi.io/tickets`)
+        axios.get(`https://628d8c71a339dfef879c3fac.mockapi.io/ticket2s`)
             .then((res) => {
                 setListTicket(res.data);
+
             })
             .catch((error) => console.log(error));
     };
@@ -39,7 +43,7 @@ export default function Content() {
         getData()
         console.log(listTicket);
     }, [])
-    
+
     return (
         <div id="Content">
             <div className="baner">
@@ -59,8 +63,8 @@ export default function Content() {
                                     />
                                     DEPARTURE
                                     <select name="DEPARTURE" onChange={handleChange} class="selectpicker" data-show-subtext="true" data-live-search="true">
-                                        <option>Hồ Chí Minh</option>
-                                        <option>Hà Nội</option>
+                                        <option>Hồ Chí Minh (SGN)</option>
+                                        <option>Hà Nội (HAN)</option>
                                         <option>Đà Nẵng</option>
                                         <option>Cần Thơ</option>
                                         <option>Hải Phòng</option>
@@ -76,8 +80,8 @@ export default function Content() {
                                         size="30px" />
                                     ARRIVAL
                                     <select name="ARRIVAL" onChange={handleChange} class="selectpicker" data-show-subtext="true" data-live-search="true">
-                                        <option>Hà Nội</option>
-                                        <option>Hồ Chí Minh</option>
+                                        <option>Hà Nội (HAN)</option>
+                                        <option>Hồ Chí Minh (SGN)</option>
                                         <option>Đà Nẵng</option>
                                         <option>Cần Thơ</option>
                                         <option>Hải Phòng</option>
@@ -112,24 +116,31 @@ export default function Content() {
                     </div>
                 </div>
             </div>
-            <div className="popular">
-                <div className="popular1">
-                    <div className="popularContent">
-                        <h1>Tickets Hot</h1>
-                        <p>See which destinations people visited the most this year</p>
+            <div id="tickets--page">
+
+                <div className="content">
+                    <div className="flight--name">
+                        <p>TP.HCM - HA NOI </p>
+                        <p>17/5</p>
+                        <p>2 ADULTS</p>
                     </div>
-                    <div className="items">
+                    <div className="ticket-tiems">
                         {listTicket
-                            .map((ticket) => (
-                                <Items className="item"
-                                    img={ticket.img}
-                                    location={ticket.location}
-                                    type={ticket.type}
-                                    price={ticket.price} />
-                            ))
-                        }
+                            .filter((tickets) => tickets.Destination === allInput.DEPARTURE && tickets.Departure === allInput.ARRIVAL)
+                            .map((tickets) => (
+                                <Ticket
+                                    LandingTime={tickets.LandingTime}
+                                    Destination={tickets.Destination}
+                                    TakeOffTime={tickets.TakeOffTime}
+                                    Departure={tickets.Departure}
+                                />
+                            ))}
                     </div>
                 </div>
+
+            </div>
+            <div className="popular" id="popular">
+                <Popular />
             </div>
             <div className="baner2">
 
