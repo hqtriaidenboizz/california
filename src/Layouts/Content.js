@@ -5,6 +5,8 @@ import axios from "axios";
 import Ticket from "../Components/ticket";
 import '../Assets/Styles/ticketspage.css';
 import Popular from "../Pages/tickets";
+
+
 export default function Content() {
     const [allInput, setallInput] = useState({
         DEPARTURE: 'Hồ Chí Minh (SGN)',
@@ -12,6 +14,7 @@ export default function Content() {
         DATES: '',
         PASSENGES: 1,
     })
+
     const handleChange = (event) => {
         let value = event.target.value;
         let name = event.target.name;
@@ -23,14 +26,15 @@ export default function Content() {
             }
         })
     }
-    const handleSubmit = (event) => {
-        document.getElementById('popular').style.display="none";
-        document.getElementById('tickets--page').style.display = "block";
-        // alert(allInput);
-        event.preventDefault();
 
+    const handleSubmit = (event) => {
+        document.getElementById('popular').style.display = "none";
+        document.getElementById('tickets--page').style.display = "block";
+        event.preventDefault();
     }
+
     const [listTicket, setListTicket] = useState([]);
+
     const getData = () => {
         axios.get(`https://628d8c71a339dfef879c3fac.mockapi.io/ticket2s`)
             .then((res) => {
@@ -39,6 +43,7 @@ export default function Content() {
             })
             .catch((error) => console.log(error));
     };
+
     useEffect(() => {
         getData()
         console.log(listTicket);
@@ -66,9 +71,9 @@ export default function Content() {
                                         <option>Hồ Chí Minh (SGN)</option>
                                         <option>Hà Nội (HAN)</option>
                                         <option>Đà Nẵng</option>
-                                        <option>Cần Thơ</option>
+                                        <option>Phú Quốc (PQC)</option>
                                         <option>Hải Phòng</option>
-                                        <option>Đà Lạt</option>
+                                        <option>Đà Lạt (DLI)</option>
                                     </select>
                                 </label>
                             </div>
@@ -83,9 +88,9 @@ export default function Content() {
                                         <option>Hà Nội (HAN)</option>
                                         <option>Hồ Chí Minh (SGN)</option>
                                         <option>Đà Nẵng</option>
-                                        <option>Cần Thơ</option>
+                                        <option>Phú Quốc (PQC)</option>
                                         <option>Hải Phòng</option>
-                                        <option>Đà Lạt</option>
+                                        <option>Đà Lạt (DLI)</option>
                                     </select>
                                 </label>
                             </div>
@@ -120,20 +125,25 @@ export default function Content() {
 
                 <div className="content">
                     <div className="flight--name">
-                        <p>TP.HCM - HA NOI </p>
-                        <p>17/5</p>
-                        <p>2 ADULTS</p>
+                        <p>{allInput.DEPARTURE} - {allInput.ARRIVAL} </p>
+                        <p>{allInput.DATES}</p>
+                        <p>{allInput.PASSENGES} ADULTS</p>
                     </div>
                     <div className="ticket-tiems">
                         {listTicket
-                            .filter((tickets) => tickets.Destination === allInput.DEPARTURE && tickets.Departure === allInput.ARRIVAL)
+                            .filter((tickets) => tickets.Destination === allInput.ARRIVAL && tickets.Departure === allInput.DEPARTURE)
                             .map((tickets) => (
-                                <Ticket
-                                    LandingTime={tickets.LandingTime}
-                                    Destination={tickets.Destination}
-                                    TakeOffTime={tickets.TakeOffTime}
-                                    Departure={tickets.Departure}
-                                />
+                            
+                                    <Ticket
+                                        Dates={allInput.DATES}
+                                        id={tickets.id}
+                                        LandingTime={tickets.LandingTime}
+                                        Destination={tickets.Destination}
+                                        TakeOffTime={tickets.TakeOffTime}
+                                        Departure={tickets.Departure}
+                                        Url = {`/detail/${tickets.id}`}
+                                    />
+                                
                             ))}
                     </div>
                 </div>
@@ -145,8 +155,8 @@ export default function Content() {
             <div className="baner2">
 
             </div>
+            
         </div>
     );
-
 }
 
